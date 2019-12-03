@@ -1,0 +1,13 @@
+<html>
+{% extends 'base.html' %}
+
+{% block head %}
+<h1>YOU CAN LOGIN HERE</h1>
+{% endblock %}
+{% block body %}
+  <form method="post" class="container jumbotron" >
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-lg btn-danger">Login</button>
+{% endblock %}
+</html>
